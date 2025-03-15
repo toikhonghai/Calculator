@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/txtDisplay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:maxLines="3"
+        android:hint="0"
+        android:textSize="80sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCE"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="CE"
+                android:onClick="clearEntry"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnC"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="C"
+                android:onClick="clear"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBS"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="BS"
+                android:onClick="backSpace"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnChia"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="/"
+                android:onClick="isOperation"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="7"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="8"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="9"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnNhan"
+                android:layout_width="80dp"
+                android:layout_height="74dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/custombuttonfunction"
+                android:onClick="isOperation"
+                android:text="×"
+                android:textSize="30dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="4"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="5"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="6"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnTru"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="-"
+                android:onClick="isOperation"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="1"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="2"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="3"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCong"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="+"
+                android:onClick="isOperation"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnAm"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:background="@drawable/custombuttonfunction"
+                android:onClick="toggleNegative"
+                android:text="+/-"
+                android:textSize="30dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn0"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonnumber"
+                android:text="0"
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnCham"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="."
+                android:onClick="isNumber"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnBang"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_margin="4dp"
+                android:layout_weight="1"
+                android:textSize="30dp"
+                android:background="@drawable/custombuttonfunction"
+                android:text="="
+                android:onClick="result"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
