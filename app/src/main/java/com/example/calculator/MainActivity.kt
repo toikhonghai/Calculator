@@ -12,8 +12,6 @@ import com.example.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-    private var input: String = "0"
-    private var output: String = "0"
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -103,7 +101,7 @@ class MainActivity : AppCompatActivity() {
             for (i in expression.indices) {
                 val char = expression[i]
                 if (char.isDigit() || char == '.') curNumber += char
-                else{
+                else {
                     if (curNumber.isNotEmpty()) {
                         val num = curNumber.toDouble()
                         when (curOperator) {
@@ -111,7 +109,7 @@ class MainActivity : AppCompatActivity() {
                             "-" -> res -= num
                             "×" -> res *= num
                             "/" -> {
-                                if(num==0.0){
+                                if (num == 0.0) {
                                     Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
                                     return
                                 }
@@ -119,14 +117,14 @@ class MainActivity : AppCompatActivity() {
                             }
                         }
                         curNumber = ""
-                    }else{
-                        if(char == '-') curNumber = "-"
+                    } else {
+                        if (char == '-') curNumber = "-"
                         else {
                             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
                             return
                         }
                     }
-                    if(char != '-' || curNumber.isEmpty()) curOperator = char.toString()
+                    if (char != '-' || curNumber.isEmpty()) curOperator = char.toString()
                 }
             }
             if (curNumber.isNotEmpty()) {
@@ -136,14 +134,14 @@ class MainActivity : AppCompatActivity() {
                     "-" -> res -= num
                     "×" -> res *= num
                     "/" -> {
-                        if(num==0.0){
+                        if (num == 0.0) {
                             Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
                             return
                         }
                         res /= num
                     }
                 }
-            }else{
+            } else {
                 Toast.makeText(this, "Error", Toast.LENGTH_SHORT).show()
                 return
             }
